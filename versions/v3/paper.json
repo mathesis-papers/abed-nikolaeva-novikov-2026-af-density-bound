@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 90899,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "b23b76b72bb634f6da0fcf2e6e85fd0b714e61f0d83d3d35db0b422ecea7f564",
+      "sha256": "b23b76b72bb634f6da0fcf2e6e85fd0b714e61f0d83d3d35db0b422ecea7f564"
+    },
+    "source": {
+      "bytes": 16680,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "d1631530d492423af7f4f2f6073b8a7e8336830f4013c83e7b8fc1638ddbf95f",
+      "sha256": "d1631530d492423af7f4f2f6073b8a7e8336830f4013c83e7b8fc1638ddbf95f"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Applying Hayashi's (2001) pinching inequality and its projection-count form in Ogawa–Hayashi (2002), we extend Abed–Nikolaeva–Novikov (2026), arXiv:2610.34388v1, Proposition 5.44(c), and answer the density-independent boundedness question in Section 11.2(5). For every accretive matrix X, Re X <= m(X)|X|, where m(X) counts its distinct positive singular values. A positive definite density of condition number kappa satisfies 1 <= a(rho) <= n*kappa/(kappa+n-1), strictly below n for n>1. The optimal coefficient in Remark 5.45 is c_n=n, and sup over positive definite densities of a(rho)=n, also with rank-one Hermitian parts. The classical Livsic triangular model displayed by Arlinskii–Tsekanovskii (2006) supplies sharpness examples; rational strictly accretive witnesses are also given.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "d9bb8a406783c5222849b798f3c2ab738f653d75",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Quantum/Matrix/AbedNikolaevaNovikovAFDensityBound.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 90899,
+      "sha256": "b23b76b72bb634f6da0fcf2e6e85fd0b714e61f0d83d3d35db0b422ecea7f564",
+      "url": "/api/v1/collected-papers/abed-nikolaeva-novikov-2026-af-density-bound/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-22T21:54:31.846368991Z",
+    "record": "abed-nikolaeva-novikov-2026-af-density-bound",
+    "repository_name": "abed-nikolaeva-novikov-2026-af-density-bound",
+    "source": {
+      "bytes": 16680,
+      "sha256": "d1631530d492423af7f4f2f6073b8a7e8336830f4013c83e7b8fc1638ddbf95f",
+      "url": "/api/v1/collected-papers/abed-nikolaeva-novikov-2026-af-density-bound/files/source?version=3"
+    },
+    "title": "Sharp accretive modulus bounds from Hayashi's (2001) pinching inequality: extending Abed–Nikolaeva–Novikov (2026), arXiv:2610.34388v1, Section 11.2(5) and Remark 5.45",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-22T21:54:31.846368991Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "abed-nikolaeva-novikov-2026-af-density-bound"
+  }
+}

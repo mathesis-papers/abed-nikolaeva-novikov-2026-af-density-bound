@@ -1,0 +1,431 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{Sharp accretive modulus bounds from Hayashi's (2001) pinching inequality:\\
+extending Abed--Nikolaeva--Novikov (2026),\\
+arXiv:2610.34388v1, Section 11.2(5) and Remark 5.45}
+\author{Haobo Ma\\{\small ChronoAI Pte Ltd, Singapore}
+\and Wenlin Zhang\\{\small National University of Singapore}\\
+{\small ChronoAI Pte Ltd, Singapore}}
+\date{6 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Applying Hayashi's (2001) pinching inequality and its projection-count form
+in Ogawa--Hayashi (2002), we extend Abed--Nikolaeva--Novikov (2026),
+arXiv:2610.34388v1, Proposition 5.44(c), and answer the density-independent
+boundedness question in Section 11.2(5).
+For every accretive matrix $X$, we obtain $\Ree X\leq m(X)|X|$,
+where $m(X)$ counts its distinct positive singular values.
+For a positive definite density of condition number $\kappa$, this gives
+$1\leq a(\rho)\leq n\kappa/(\kappa+n-1)<n$ when $n>1$.
+The optimal operator constant in Remark 5.45 is $c_n=n$, and
+$\sup_{\rho>0}a(\rho)=n$, also with rank-one Hermitian parts.
+The sharpness mechanism is classical: the Liv\v{s}ic triangular model
+displayed by Arlinskii--Tsekanovskii (2006) supplies such examples;
+we also give rational strictly accretive witnesses.
+\end{abstract}
+
+\section{The question and the matrix bound}
+
+For $X\in M_n(\C)$ put $|X|=(X^*X)^{1/2}$ and
+$\Ree X=(X+X^*)/2$. An accretive matrix has $\Ree X\geq0$.
+For $\rho>0$, write $\varphi_\rho(Y)=\Tr(\rho Y)$ and define
+\begin{equation}\label{eq:def}
+a(\rho)=\sup_{\substack{A\geq0,\ B=B^*\\A+iB\ne0}}
+\frac{\Tr(\rho A)}{\Tr(\rho|A+iB|)}.
+\end{equation}
+These are the conventions of \cite[Sections 3.1 and 5.12]{ANN};
+no trace normalization is imposed on $\rho$.
+Section 11.2(5), printed page 59, poses the question
+``Is $a$ bounded on $M_n(\C)$ independently of $\rho$?''
+Here $n$ is fixed. Proposition 5.44(c) of \cite{ANN} already gives
+$\Ree X\leq2|X|$ in dimension two and $a(\rho)<2$ there.
+The argument below gives the all-dimensional answer, a singular-value
+refinement, and the optimal dimension constant of Remark 5.45.
+The underlying positive-matrix estimate is Hayashi's pinching inequality
+\cite[Lemma 5]{H}; its projection-count version appears in
+\cite[Appendix B, Lemma 4, (61)]{OH}.
+The similarity-to-unitary and trace method also appears in fedja's
+2017 answer \cite{fedja}, in a different operator comparison.
+These sources provide the pinching and similarity methods; their
+accretive-modulus specialization is the argument below. Winter (2025)
+\cite[Section I, Lemma 1, (4)]{W} gives weighted generalisations of the
+same pinching inequality.
+
+The earlier bound in \cite[Proposition 5.44(a)]{ANN} is
+$a(\rho)\leq G(\kappa)=(\kappa+1)/(2\sqrt\kappa)$.
+It remains applicable alongside the dimension-dependent estimate here:
+their minimum is an upper bound. The uniform ceiling $n$, rather than
+a pointwise improvement of $G(\kappa)$, answers the fixed-dimensional
+boundedness question.
+
+For comparison, the modulus estimates of Furuichi, Moradi and Sababheh
+\cite[Section 2.5, Theorem 2.6]{FMS} assume a numerical range in a fixed
+sector of half-angle $\alpha<\pi/2$ and contain a factor $\sec\alpha$.
+Here the comparison bounds $\Ree X$ by $|X|$ with a coefficient depending
+only on dimension and includes a singular Hermitian part.
+
+\paragraph{Literature scope.}
+Full-text access to Moradi--Furuichi--Sababheh (2026) \cite{MFS26}
+was unavailable; comparison is limited to its abstract and bibliography.
+Whether its theorems or factorisations establish or directly imply the
+dimension or distinct-singular-value Loewner-order bounds, the weighted
+density estimate, or the sharp coefficient $c_n=n$ remains unresolved.
+The abstract's sector-angle terminology alone does not exclude those
+overlaps. The results below are explicit deductions from the credited
+classical methods, without a priority assertion relative to that article.
+
+\begin{lemma}\label{lem:matrix}
+If $X\in M_n(\C)$ is accretive, let $m(X)$ be the number of distinct
+positive singular values, with $m(0)=0$. Then
+\begin{equation}\label{eq:matrix}
+0\leq\Ree X\leq m(X)|X|\leq\rank(X)|X|\leq n|X|.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Set $A=\Ree X$, $P=|X|$, and $Q=A^{1/2}$.
+Write $P=\sum_{j=1}^m s_jE_j$ for its distinct positive eigenvalues
+and their orthogonal spectral projections; let $E_0$ project onto $\ker P$.
+For $v$ in the range of $E_j$, $\|Xv\|=s_j\|v\|$, so
+\begin{equation}\label{eq:diag}
+0\leq\langle v,Av\rangle=\Ree\langle v,Xv\rangle
+\leq s_j\|v\|^2.
+\end{equation}
+The same argument on $\ker P=\ker X$ gives $QE_0=0$.
+The triangle and Cauchy--Schwarz inequalities therefore give, for any $v$,
+\begin{align*}
+\langle v,Av\rangle
+&=\left\|\sum_{j=1}^m QE_jv\right\|^2
+\leq m\sum_{j=1}^m\|QE_jv\|^2\\
+&\leq m\sum_{j=1}^m s_j\|E_jv\|^2
+=m\langle v,Pv\rangle.
+\end{align*}
+For $X=0$ the assertion is immediate. This is the projection-count
+pinching proof, including zero singular values.
+\end{proof}
+
+\begin{corollary}\label{cor:condition}
+Let $\rho>0$ have extreme eigenvalues $L\geq l>0$ and condition
+number $\kappa=L/l$. For accretive $X\ne0$, with $m=m(X)$,
+\[
+\frac{\Tr(\rho\Ree X)}{\Tr(\rho|X|)}
+\leq\frac{m\kappa}{\kappa+m-1}.
+\]
+\end{corollary}
+\begin{proof}
+Put $A=\Ree X$, $P=|X|$, $N=\Tr(\rho A)$ and $D=\Tr(\rho P)>0$.
+Summing the diagonal estimate \eqref{eq:diag} in a singular-vector
+basis gives $\Tr A\leq\Tr P$.
+The positive matrix $mP-A$ thus has trace at least $(m-1)\Tr P$.
+Consequently
+\[
+mD-N\geq l(m-1)\Tr P\geq \frac{l(m-1)}{L}N,
+\]
+where $N\leq L\Tr A\leq L\Tr P$. Rearranging proves the claim.
+\end{proof}
+
+\begin{theorem}\label{thm:density}
+For every $n\geq1$ and $\rho\in M_n(\C)$ with $\rho>0$,
+put $\kappa=\lambda_{\max}(\rho)/\lambda_{\min}(\rho)$.
+The set in \eqref{eq:def} is nonempty and has a real least upper bound,
+and
+\[
+1\leq a(\rho)\leq\frac{n\kappa}{\kappa+n-1}\leq n.
+\]
+If $n=1$, then $a(\rho)=1$. If $n>1$, then $a(\rho)<n$.
+The supremum is attained for every $\rho>0$.
+\end{theorem}
+\begin{proof}
+For any nonzero $P\geq0$, if $m=\lambda_{\min}(\rho)>0$, then
+\[
+\Tr(\rho P)\geq m\Tr P>0.
+\]
+Here the nonnegative trace pairing follows from
+$\Tr(RP)=\Tr(P^{1/2}RP^{1/2})\geq0$ for $R,P\geq0$.
+Consequently every denominator in \eqref{eq:def} is positive.
+Taking trace pairings in \eqref{eq:matrix} bounds every quotient
+between zero and $n$. The choice $A=I$, $B=0$ gives the value one.
+Completeness of the real numbers supplies the least upper bound.
+Corollary~\ref{cor:condition} and monotonicity of
+$u\kappa/(\kappa+u-1)$ for $u\geq1$ give the stated bound, including
+strictness for $n>1$. For $n=1$ the bounds coincide.
+
+For attainment, the compactness argument of
+\cite[Proposition 5.44(b)]{ANN} applies: restrict by homogeneity to
+\[
+\{X:\Ree X\geq0,\ \Tr(X^*X)=1\}.
+\]
+This is a nonempty compact set. On it,
+$\Tr(\rho|X|)\geq m\Tr|X|\geq m$, since the sum of singular values
+is at least their Euclidean norm. The quotient is continuous, because
+the positive square root is continuous in finite dimension, and so
+attains its maximum.
+\end{proof}
+
+\begin{corollary}\label{cor:positive}
+Restricting \eqref{eq:def} to $B\geq0$ gives a constant $a_+(\rho)$
+with $1\leq a_+(\rho)\leq a(\rho)\leq n\kappa/(\kappa+n-1)$.
+For $n>1$ the last expression is strictly less than $n$.
+The restricted supremum is attained.
+\end{corollary}
+\begin{proof}
+The restricted set is a subset of the original set and contains
+the choice $A=I$, $B=0$. Its Frobenius-normalized set is closed
+in the compact set above; the same continuity argument applies.
+\end{proof}
+
+\section{Sharpness in every dimension}
+
+\begin{theorem}\label{thm:sharp}
+The least constant $c_n$ such that $\Ree X\leq c_n|X|$ for all
+accretive $X\in M_n(\C)$ is $n$. More generally the optimal coefficient
+for matrices of fixed rank $1\leq r\leq n$ is $r$. Moreover,
+\[
+\sup_{\rho\in M_n(\C),\ \rho>0}a(\rho)=n.
+\]
+The same supremum holds if $\Tr\rho=1$ is required.
+\end{theorem}
+\begin{proof}
+The upper bounds are already proved. The following strictly accretive
+triangular family implements the similarity/congruence mechanism in
+\cite[following Proposition 5.44]{ANN}; the classical rank-one
+Hermitian-part version is given below. Fix $0<t<1/n$, set
+$h_{n+1}=0$, and for $1\leq j\leq n$ put
+\[
+\lambda_j=\frac{1+ijt}{1-ijt},\qquad
+h_j=\Ree\lambda_j=\frac{1-j^2t^2}{1+j^2t^2}.
+\]
+The numbers $\lambda_j$ are distinct and have modulus one, and
+$h_1>\cdots>h_n>0$. Define an upper triangular matrix $T$ by
+\[
+T_{jj}=\lambda_j,\qquad T_{ij}=2h_j\ (i<j),\qquad T_{ij}=0\ (i>j).
+\]
+Its Hermitian part $H=\Ree T$ satisfies $H_{ij}=h_{\max(i,j)}$.
+If $b_k$ is the vector with its first $k$ entries equal to one and
+the rest zero, then
+\begin{equation}\label{eq:gram}
+H=\sum_{k=1}^n(h_k-h_{k+1})b_kb_k^*>0.
+\end{equation}
+The positivity is strict because all coefficients are positive and
+$b_1,\ldots,b_n$ form a basis.
+
+The distinct eigenvalues make $T$ diagonalizable: write $T=SDS^{-1}$
+with $D=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)$.
+Set $G=(S^{-1})^*S^{-1}>0$. Since $D^*D=I$, one has $T^*GT=G$.
+For
+\[
+X=G^{1/2}TG^{1/2},
+\]
+it follows that
+$X^*X=G^{1/2}T^*GTG^{1/2}=G^2$,
+so $|X|=G$ and $\Ree X=G^{1/2}HG^{1/2}>0$.
+Let $w=(1,\ldots,1)^\mathsf{T}$, choose $\delta>0$, and set
+\[
+W=ww^*+\delta I>0,\qquad
+\rho=G^{-1/2}WG^{-1/2}>0.
+\]
+Cyclicity of the trace gives the admissible quotient
+\begin{equation}\label{eq:sharpquotient}
+\frac{\Tr(\rho\Ree X)}{\Tr(\rho|X|)}
+=\frac{\Tr(WH)}{\Tr W}
+=\frac{\displaystyle\sum_{i,j=1}^n h_{\max(i,j)}
+      +\delta\sum_{j=1}^n h_j}{n(1+\delta)}.
+\end{equation}
+As $t\downarrow0$, $H$ tends to $ww^*$, so this expression tends to
+$(n+\delta)/(1+\delta)$. Letting $\delta\downarrow0$ gives $n$.
+In particular no smaller universal matrix constant can hold, since
+such a constant would bound all the trace quotients above.
+The rank-$r$ statement follows by taking this construction in dimension
+$r$ and adjoining a zero block. Finally $a(s\rho)=a(\rho)$ for every $s>0$, by cancellation in
+\eqref{eq:def}, so normalizing $\rho$ does not change the supremum.
+\end{proof}
+
+\begin{corollary}\label{cor:rankone}
+Both sharp suprema in Theorem~\ref{thm:sharp} remain $n$ under the
+restriction $\rank(\Ree X)=1$.
+\end{corollary}
+\begin{proof}
+In the notation above replace the strict upper entries of $T$ by
+$2\sqrt{h_ih_j}$ for $i<j$. Then $\Ree T=vv^*$, where
+$v=(\sqrt{h_1},\ldots,\sqrt{h_n})^{\mathsf T}$, and
+$\|\Ree T\|=\sum_jh_j\to n$ as $t\downarrow0$.
+This is the Liv\v{s}ic triangular model in
+\cite[Section 2.3, Theorem 2.7]{AT}, multiplied by $-i$:
+take $\alpha_j=-\Im\lambda_j$, $\beta_j=\sqrt{2h_j}$ there.
+Its distinct unimodular eigenvalues give $G$ and $X$ as above.
+Congruence preserves the rank of the Hermitian part.
+For $q=v/\|v\|$ and $W=qq^*+\delta I$, the corresponding density
+$\rho=G^{-1/2}WG^{-1/2}>0$ has quotient
+\[
+\frac{\Tr(Wvv^*)}{\Tr W}
+=\left(\sum_jh_j\right)\frac{1+\delta}{1+n\delta}\longrightarrow n
+\]
+as $t,\delta\downarrow0$.
+\end{proof}
+
+\begin{corollary}\label{cor:strictoperator}
+For each accretive matrix of rank $r>1$ there is a coefficient
+$c(X)<r$ with $\Ree X\leq c(X)|X|$. The optimal rank coefficient
+$r$ is therefore a supremum, not an attained operator ratio.
+\end{corollary}
+\begin{proof}
+If $Xv=0$ then $\langle v,\Ree Xv\rangle=0$, so
+$(\Ree X)v=0$ and $X^*v=0$. Thus $\ker X$ reduces $X$.
+Restrict to its orthogonal complement, where $P=|X|>0$ and
+$X=UP$ with $U$ unitary. The matrix
+$T=P^{-1/2}XP^{-1/2}=P^{-1/2}UP^{1/2}$ is similar to $U$.
+Consequently $H=\Ree T\geq0$ has
+$\lambda_{\max}(H)\leq\Tr H=\Ree\Tr U\leq r$.
+Equality $\lambda_{\max}(H)=r$ would force every eigenvalue of $U$
+to be $1$, hence $U=I$, $T=I$ and $H=I$, impossible for $r>1$.
+Take $c(X)=\lambda_{\max}(H)$ and extend by zero on $\ker X$.
+This is the similarity-and-trace method of \cite{fedja};
+the dimension-two nonattainment appears in \cite{ANN}.
+\end{proof}
+
+\begin{corollary}\label{cor:blocks}
+For positive definite $\rho_1,\rho_2$,
+$a(\rho_1\oplus\rho_2)\geq\max\{a(\rho_1),a(\rho_2)\}$.
+The same statement holds for $a_+$.
+\end{corollary}
+\begin{proof}
+Use $X=X_1\oplus0$ and $X=0\oplus X_2$ respectively in
+\eqref{eq:def}; the quotients are exactly the smaller-block quotients.
+The condition on the imaginary part is preserved.
+\end{proof}
+
+\section{Coverage and verification}
+
+All locators in this table refer to arXiv:2610.34388v1 \cite{ANN}.
+Questions are labelled ``Answered'', assertions already proved in the
+source ``Reproved'', and additional conclusions ``Not posed; proved''.
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+Section 11.2(5), boundedness on $M_n(\C)$ &
+Answered: yes, with $a(\rho)\leq n\kappa/(\kappa+n-1)$
+(Theorem~\ref{thm:density}).\\
+Section 11.2(5), same boundedness with $B\geq0$ &
+Answered: yes (Corollary~\ref{cor:positive}); the same strengthened upper bound.\\
+Remark 5.45, best operator constant $c_n$ &
+Not posed as an equality; proved: $c_n=n$
+(Theorem~\ref{thm:sharp}), settling the numerical lower bound $c_3\geq2.94$.
+Reproved; prior proof of $c_2=2$: Abed--Nikolaeva--Novikov (2026),
+Proposition 5.44(c) and its following paragraph.\\
+Proposition 5.44(b),(c), attainment and the $n=2$ upper bound &
+Reproved; prior proof Abed--Nikolaeva--Novikov (2026).
+Theorem~\ref{thm:density} also gives the all-dimensional strict bound.\\
+Section 11.2(5), determine $a(\rho)$ and $a_+(\rho)$ &
+Not covered: the full density-dependent formulas; Theorems~\ref{thm:density}
+and \ref{thm:sharp} give bounds and the supremum over densities.\\
+Section 11.2(5), II$_1$-factor equality and its $B\geq0$ variant &
+Not covered.\\
+Remark 5.45, rank-one maximisers &
+Not covered for a fixed density. Not posed; proved: rank-one Hermitian
+parts suffice for the global sharp coefficient (Corollary~\ref{cor:rankone}).\\
+Remark 5.45, extreme-density multiplicities &
+Not covered: exact dependence or independence. Not posed; proved:
+block monotonicity (Corollary~\ref{cor:blocks}).\\
+Remark 5.45, numerical values, $\kappa\to1$ ratio and positive-$B$ values &
+Not covered; no numerical equality or asymptotic expansion is inferred.\\
+Singular-value, condition-number and rank refinements &
+Not posed; proved: Lemma~\ref{lem:matrix}, Corollary~\ref{cor:condition},
+Theorem~\ref{thm:sharp} and Corollary~\ref{cor:strictoperator}.
+The pinching theorem is prior work of Hayashi (2001), also
+Ogawa--Hayashi (2002); the accretive specialization is supplied above.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The declarations in the
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Quantum/Matrix/AbedNikolaevaNovikovAFDensityBound.lean}{pinned Lean source}
+have namespace
+\begin{quote}\small\ttfamily
+D5.S3.Quantum.Matrix.\\
+AbedNikolaevaNovikovAFDensityBound
+\end{quote}
+The declaration \texttt{accretive\_le\_card\_abs} proves
+$A\leq n|A+iB|$ for $A\geq0$, $B=B^*$, including singular $A+iB$.
+The imported
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Quantum/FiniteDimensional.lean}{finite-dimensional trace definition}
+is \texttt{bornProbability rho P = Matrix.trace (rho * P)};
+it imposes no trace-one normalization.
+The declaration \texttt{result} proves that the exact quotient set is
+nonempty, has its stated least upper bound, and admits the
+density-independent witness $C=n$ for every $n\geq1$.
+The distinct-singular-value and rank refinements, condition-number bound,
+strictness, attainment, positive-$B$ deduction, block monotonicity and
+sharpness have written proofs above; they are not conclusions of these
+two declarations.
+The accompanying \texttt{verify.py} uses exact rational arithmetic to
+check noncommuting and singular matrix examples in dimensions $1$--$6$
+and the rational sharpness construction in dimensions $1$--$8$,
+including its diagonalizer and the identity $T^*GT=G$ over $\mathbb Q(i)$.
+These finite checks illustrate the identities; the proofs establish
+the statements for all dimensions.
+
+\begin{thebibliography}{8}
+\bibitem{ANN}
+Sami Abdullah Abed, Irina Nikolaeva and Andrej Novikov,
+\emph{How characterisations of traces and central elements fail:
+sharp violation constants via Michelson contrast and noncentrality},
+arXiv:2610.34388v1 (25 October 2026), Sections 3.1, 5.12 and 11.2(5).
+\href{https://arxiv.org/abs/2610.34388v1}{arXiv:2610.34388v1}.
+\bibitem{H}
+Masahito Hayashi,
+\emph{Optimal sequence of POVMs in the sense of Stein's lemma in
+quantum hypothesis testing}, arXiv:quant-ph/0107004v2 (9 August 2001),
+Section 3, Lemma 5, p.~6.
+\href{https://arxiv.org/abs/quant-ph/0107004v2}{quant-ph/0107004v2}.
+\bibitem{OH}
+Tomohiro Ogawa and Masahito Hayashi,
+\emph{On error exponents in quantum hypothesis testing},
+arXiv:quant-ph/0206151v3 (14 August 2002), Appendix B,
+Lemma 4, (61), pp.~10--11.
+\href{https://arxiv.org/abs/quant-ph/0206151v3}{quant-ph/0206151v3}.
+\bibitem{AT}
+Yury Arlinskii and Eduard Tsekanovskii,
+\emph{Non-self-adjoint Jacobi matrices with rank one imaginary part},
+arXiv:math/0602033v1 (2 February 2006), Section 2.3, Theorem 2.7, p.~10.
+\href{https://arxiv.org/abs/math/0602033v1}{math/0602033v1}.
+\bibitem{fedja}
+fedja, answer to \emph{Comparison of the absolute value of an operator
+with its positive parts}, MathOverflow, 8 November 2017, answer 285512,
+first three paragraphs.
+\href{https://mathoverflow.net/a/285512}{MathOverflow answer 285512}.
+\bibitem{FMS}
+Shigeru Furuichi, Hamid Reza Moradi and Mohammad Sababheh,
+\emph{Further properties of accretive matrices},
+Annales Fennici Mathematici \textbf{49} (2024), 387--404.
+\href{https://doi.org/10.54330/afm.146278}{doi:10.54330/afm.146278}.
+\bibitem{W}
+Andreas Winter,
+\emph{Generalised Pinching Inequality},
+arXiv:2510.19111v1 (21 October 2025), Section I, Lemma 1, (4).
+\href{https://arxiv.org/abs/2510.19111v1}{arXiv:2510.19111v1}.
+\bibitem{MFS26}
+Hamid Reza Moradi, Shigeru Furuichi and Mohammad Sababheh,
+\emph{Norm bounds and factorization results for accretive matrices},
+The Journal of Analysis \textbf{34} (2026), 2641--2660,
+published online 8 June 2026.
+\href{https://doi.org/10.1007/s41478-026-01123-8}{doi:10.1007/s41478-026-01123-8}.
+\end{thebibliography}
+\medskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+\end{document}

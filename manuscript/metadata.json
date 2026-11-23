@@ -1,0 +1,15 @@
+{
+  "id": "abed-nikolaeva-novikov-2026-af-density-bound",
+  "revision": 3,
+  "problem_ids": ["abed-nikolaeva-novikov-2026-af-density-bound"],
+  "topic": "Pinching, distinct-singular-value bounds, density condition numbers and sharp accretive modulus constants",
+  "title": "Sharp accretive modulus bounds from Hayashi's (2001) pinching inequality: extending Abed–Nikolaeva–Novikov (2026), arXiv:2610.34388v1, Section 11.2(5) and Remark 5.45",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Applying Hayashi's (2001) pinching inequality and its projection-count form in Ogawa–Hayashi (2002), we extend Abed–Nikolaeva–Novikov (2026), arXiv:2610.34388v1, Proposition 5.44(c), and answer the density-independent boundedness question in Section 11.2(5). For every accretive matrix X, Re X <= m(X)|X|, where m(X) counts its distinct positive singular values. A positive definite density of condition number kappa satisfies 1 <= a(rho) <= n*kappa/(kappa+n-1), strictly below n for n>1. The optimal coefficient in Remark 5.45 is c_n=n, and sup over positive definite densities of a(rho)=n, also with rank-one Hermitian parts. The classical Livsic triangular model displayed by Arlinskii–Tsekanovskii (2006) supplies sharpness examples; rational strictly accretive witnesses are also given.",
+  "summary": "A projection-count pinching argument gives a singular-value refinement and an explicit condition-number bound for the Alhasan–Fawwaz quotient. Written proofs establish sharpness at every fixed rank, rank-one Hermitian-part sharpness, operator nonattainment for rank greater than one, positive-imaginary-part bounds and attainment, and block monotonicity. Classical antecedents and the earlier dimension-two proof are credited. The pinned Lean declarations establish the dimension bound and the exact quotient-set boundedness statement. The comparison with Moradi–Furuichi–Sababheh (2026), DOI 10.1007/s41478-026-01123-8, is limited to its accessible abstract and bibliography: potential overlap with the Loewner-order bounds, density estimate or sharp coefficient remains unresolved; no priority assertion relative to that article is made.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Quantum/Matrix/AbedNikolaevaNovikovAFDensityBound.lean"
+}

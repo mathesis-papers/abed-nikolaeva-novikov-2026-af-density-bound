@@ -1,0 +1,242 @@
+{
+  "arithmetic": "exact rational",
+  "coverage": "Finite matrix identities and inequalities; all-dimension statements have written proofs in note.tex.",
+  "matrix_examples": [
+    {
+      "condition_number_enclosure_upper": "57/49",
+      "dimension": 1,
+      "quotient": "1/1",
+      "quotient_bound_from_enclosure": "1/1",
+      "rank": 1
+    },
+    {
+      "condition_number_enclosure_upper": "139/49",
+      "dimension": 2,
+      "quotient": "9539/9606",
+      "quotient_bound_from_enclosure": "139/94",
+      "rank": 2
+    },
+    {
+      "condition_number_enclosure_upper": "139/49",
+      "dimension": 2,
+      "quotient": "1/1",
+      "quotient_bound_from_enclosure": "1/1",
+      "rank": 1
+    },
+    {
+      "condition_number_enclosure_upper": "353/49",
+      "dimension": 3,
+      "quotient": "465890437/470452645",
+      "quotient_bound_from_enclosure": "1059/451",
+      "rank": 3
+    },
+    {
+      "condition_number_enclosure_upper": "353/49",
+      "dimension": 3,
+      "quotient": "561363/565357",
+      "quotient_bound_from_enclosure": "353/201",
+      "rank": 2
+    },
+    {
+      "condition_number_enclosure_upper": "499/49",
+      "dimension": 4,
+      "quotient": "745545910355/752787409457",
+      "quotient_bound_from_enclosure": "998/323",
+      "rank": 4
+    },
+    {
+      "condition_number_enclosure_upper": "499/49",
+      "dimension": 4,
+      "quotient": "1719209017/1731912169",
+      "quotient_bound_from_enclosure": "499/199",
+      "rank": 3
+    },
+    {
+      "condition_number_enclosure_upper": "769/49",
+      "dimension": 5,
+      "quotient": "(65594*10^12+403105*10^6+529068)/(66213*10^12+852151*10^6+792865)",
+      "quotient_bound_from_enclosure": "769/193",
+      "rank": 5
+    },
+    {
+      "condition_number_enclosure_upper": "769/49",
+      "dimension": 5,
+      "quotient": "(56*10^12+831400*10^6+528700)/(57*10^12+330178*10^6+54561)",
+      "quotient_bound_from_enclosure": "769/229",
+      "rank": 4
+    },
+    {
+      "condition_number_enclosure_upper": "191/7",
+      "dimension": 6,
+      "quotient": "(305523*10^12+537055*10^6+26648)/(307216*10^12+230946*10^6+239901)",
+      "quotient_bound_from_enclosure": "573/113",
+      "rank": 6
+    },
+    {
+      "condition_number_enclosure_upper": "191/7",
+      "dimension": 6,
+      "quotient": "(2227*10^12+209397*10^6+110403)/(2244*10^12+156549*10^6+15030)",
+      "quotient_bound_from_enclosure": "955/219",
+      "rank": 5
+    }
+  ],
+  "repeated_singular_value_examples": [
+    {
+      "condition_number": 1,
+      "dimension": 1,
+      "distinct_positive_singular_values": 1,
+      "quotient": "1/1",
+      "quotient_upper_bound": "1/1"
+    },
+    {
+      "condition_number": 2,
+      "dimension": 2,
+      "distinct_positive_singular_values": 1,
+      "quotient": "9999/10001",
+      "quotient_upper_bound": "1/1"
+    },
+    {
+      "condition_number": 3,
+      "dimension": 3,
+      "distinct_positive_singular_values": 2,
+      "quotient": "569460935/569657817",
+      "quotient_upper_bound": "3/2"
+    },
+    {
+      "condition_number": 4,
+      "dimension": 4,
+      "distinct_positive_singular_values": 2,
+      "quotient": "(271*10^12+966397*10^6+509991)/(272*10^12+95208*10^6+330153)",
+      "quotient_upper_bound": "8/5"
+    },
+    {
+      "condition_number": 5,
+      "dimension": 5,
+      "distinct_positive_singular_values": 3,
+      "quotient": "(7*10^18+629020*10^12+495967*10^6+46875)/(7*10^18+633057*10^12+173853*10^6+750288)",
+      "quotient_upper_bound": "15/7"
+    },
+    {
+      "condition_number": 6,
+      "dimension": 6,
+      "distinct_positive_singular_values": 3,
+      "quotient": "(10251*10^18+657859*10^12+4596*10^6+949281)/(10257*10^18+828638*10^12+591886*10^6+105650)",
+      "quotient_upper_bound": "9/4"
+    }
+  ],
+  "sharpness_examples": [
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 1,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "999999/1000001",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 2,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "499998999999/250001250001",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 3,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(750000*10^12+333311*10^6+249991)/(250003*10^12+500012*10^6+250009)",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 4,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(62500*10^18+499994*10^12+499966*10^6+593741)/(15625*10^18+468754*10^12+265637*10^6+812509)",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 5,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(3125*10^24+70624*10^18+683363*10^12+256331*10^6+96491)/(625*10^24+34375*10^18+639379*10^12+778138*10^6+172509)",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 6,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(937*10^30+543333*10^24+518216*10^18+239420*10^12+653264*10^6+464919)/(156*10^30+264219*10^24+219225*10^18+698952*10^12+546370*10^6+802581)",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 7,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(1093*10^36+838439*10^30+44967*10^24+291253*10^18+698503*10^12+280292*10^6+908531)/(156*10^36+271876*10^30+165967*10^24+441011*10^18+795045*10^12+574750*10^6+326469)",
+      "t": "1/1000"
+    },
+    {
+      "complex_matrix_identities": {
+        "arithmetic": "Q(i)",
+        "diagonalizer": "T S = S D",
+        "inverse": "S inverse(S) = I",
+        "metric_identity": "T* G T = G",
+        "positive_metric": "G = inverse(S)* inverse(S)"
+      },
+      "delta": "1/1000000",
+      "dimension": 8,
+      "gap_below_dimension_less_than": "1/100",
+      "quotient_lower_bound": "(6*10^42+10387*10^36+648293*10^30+146882*10^24+280959*10^18+520849*10^12+670046*10^6+372673)/(751355*10^36+180605*10^30+971456*10^24+384710*10^18+579123*10^12+399569*10^6+662952)",
+      "t": "1/1000"
+    }
+  ],
+  "status": "pass"
+}
