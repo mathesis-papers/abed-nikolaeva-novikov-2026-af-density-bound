@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24407265",
     "current_version": 3,
     "doi": "10.5281/zenodo.24407266",
+    "kind": "note",
     "lean_source": {
       "revision": "d9bb8a406783c5222849b798f3c2ab738f653d75",
       "url": "https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S3/Quantum/Matrix/AbedNikolaevaNovikovAFDensityBound.lean"
@@ -55,10 +56,12 @@
     "title": "Sharp accretive modulus bounds from Hayashi's (2001) pinching inequality: extending Abed–Nikolaeva–Novikov (2026), arXiv:2610.34388v1, Section 11.2(5) and Remark 5.45",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-22T21:54:31.846368991Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "abed-nikolaeva-novikov-2026-af-density-bound"
